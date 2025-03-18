@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Global Plate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #1d3557, #457b9d);
+            color: white;
+            overflow-x: hidden;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 10%;
+            height: 70px;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.8);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .links {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            margin: 0;
+        }
+
+        .logo {
+            color: #f4a261;
+            font-size: 30px;
+            font-weight: bold;
+            animation: glow 2s infinite;
+            text-shadow: 0 0 15px #f4a261;
+        }
+
+        @keyframes glow {
+            0%, 100% { text-shadow: 0 0 10px #f4a261, 0 0 20px #f4a261; }
+            50% { text-shadow: 0 0 30px #f4a261; }
+        }
+
+        .links li {
+            font-size: 18px;
+            font-weight: 500;
+            color: white;
+            transition: color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .links li:hover {
+            color: #f4a261;
+        }
+
+        .icons i {
+            font-size: 22px;
+            color: white;
+            transition: transform 0.3s ease, color 0.3s ease;
+        }
+
+        .icons i:hover {
+            color: #f4a261;
+            transform: scale(1.1);
+        }
+
+        .hero {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            padding: 20px 10%;
+            margin-top: 100px;
+            text-align: left;
+        }
+
+        .left1 {
+            font-size: 22px;
+            font-style: italic;
+            opacity: 0;
+            animation: slideIn 1s ease-out forwards;
+        }
+
+        .left2 {
+            font-size: 36px;
+            font-weight: bold;
+            color: #f4a261;
+            margin: 10px 0;
+            opacity: 0;
+            animation: fadeZoomIn 1.5s 0.5s ease-out forwards;
+        }
+
+        .left3 {
+            font-size: 18px;
+            font-style: italic;
+            color: #ffd166;
+            opacity: 0;
+            animation: fadeIn 2s 1s ease-out forwards;
+        }
+
+        .left4 {
+            border: 2px solid #f4a261;
+            padding: 10px 20px;
+            border-radius: 30px;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            text-transform: uppercase;
+            background: #f4a261;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .left4:hover {
+            background: transparent;
+            color: #f4a261;
+            transform: scale(1.05);
+        }
+
+        .food {
+           background: url('food.png') no-repeat center center;
+    width: 250px;
+    height: 200px;
+    background-size: cover;
+    border-radius: 50%; /* Makes the image circular */
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
+}
+
+
+        .food:hover {
+            transform: scale(1.1);
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-50px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        @keyframes fadeZoomIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">Global Plate</div>
+        <ul class="links">
+            <li>Home</li>
+            <li>Menu</li>
+            <li>About</li>
+            <li>Locations</li>
+            <li>Contact</li>
+        </ul>
+        <div class="icons">
+            <i class="fa-solid fa-search"></i>
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+    <div class="hero">
+        <span class="left1">Feeling hungry?</span>
+        <span class="left2">Discover culinary delights now!</span>
+        <span class="left3">Indulge in the joy of flavors and explore our menu.</span>
+        <button class="left4">Explore Now</button>
+        <div class="food"></div>
+    </div>
+</body>
+</html>
